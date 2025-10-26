@@ -5,7 +5,7 @@ import time
 import traceback
 
 # ---- 关键：在任何 PyQt5 导入前设置 Qt platform 插件路径 ----
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = r"C:\Users\黎海华\AppData\Local\Programs\Python\Python38\Lib\site-packages\PyQt5\Qt5\plugins\platforms"
+os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = r"C:\envs\Anaconda3\Lib\site-packages\menuinst\platforms"
 
 # --------------------- 现在导入 PyQt5 ---------------------
 from PyQt5.QtWidgets import (
