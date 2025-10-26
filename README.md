@@ -22,3 +22,9 @@ PyAudio 安装问题（Windows）：使用 pipwin install pyaudio 最稳妥；�
 TTS 无声：确认系统音量、pyttsx3 后端驱动是否正常（Windows 通常用 SAPI5，macOS 用 NSSpeechSynthesizer）。
 
 UI 卡顿：网络请求和识别都在后台线程；若 UI 仍卡顿，请检查是否在主线程执行了长耗时操作。
+
+
+
+运行界面：
+
+![微信图片_20251026170641_40_129](C:\Users\gx\Desktop\微信图片_20251026170641_40_129.png)
