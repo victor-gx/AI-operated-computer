@@ -1,15 +1,20 @@
+import os
 import sys
 import threading
 import time
 import traceback
 
+# ---- 关键：在任何 PyQt5 导入前设置 Qt platform 插件路径 ----
+os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = r"C:\Users\黎海华\AppData\Local\Programs\Python\Python38\Lib\site-packages\PyQt5\Qt5\plugins\platforms"
+
+# --------------------- 现在导入 PyQt5 ---------------------
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QTextEdit, QPushButton, QLabel, QVBoxLayout, QWidget,
     QHBoxLayout, QComboBox, QLineEdit, QMessageBox
 )
 from PyQt5.QtCore import QThread, pyqtSignal
 
-# 导入项目中的模块（确保路径正确）
+# --------------------- 项目模块 ---------------------
 from ai.tts import speak
 from ai.intent_parser import analyze_intent
 from actions.web_control import open_website, navigate_to
@@ -17,11 +22,12 @@ from actions.system_control import execute_system_action
 from actions.app_control import open_app
 import speech_recognition as sr
 
+
 # 如果你把 recognizer 放在 voice/recognizer.py 内并导出 select_mic/listen，可替换为：
 # from voice.recognizer import select_mic, listen
 # 但这里我们直接使用 speech_recognition 的接口以便 UI 控制设备索引和监听
 
-WAKE_WORD = "小智"  # 默认，如果你使用 config.yaml 管理，可读入配置
+WAKE_WORD = "灵汐"  # 默认，如果你使用 config.yaml 管理，可读入配置
 
 
 class VoiceWorker(QThread):

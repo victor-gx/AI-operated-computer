@@ -2,3 +2,8 @@ LINGXI_API_KEY: "sk-7519a4619ce3c2779ec079d177a2c9f8828ea99f9e5b08339dc485bd33c7
 TTS_VOICE: "zh"
 TTS_RATE: 150
 WAKE_WORD: "灵汐"
+
+# 可选：连续监听模式参数
+CONTINUOUS_MODE: true          # 是否启用连续监听模式
+CONTINUOUS_LISTEN_DURATION: 10 # 连续监听模式持续时长（秒）
+

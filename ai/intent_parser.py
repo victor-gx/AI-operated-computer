@@ -1,11 +1,9 @@
 import json
 import requests
-import yaml
+from config import LINGXI_API_KEY
 
 def load_key():
-    with open("config.yaml", "r", encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    return cfg["LINGXI_API_KEY"]
+    return LINGXI_API_KEY
 
 def analyze_intent(user_text):
     """

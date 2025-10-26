@@ -1,3 +1,5 @@
 @echo off
-python ui/main_window.py
+cd /d "%~dp0"
+set PYTHONPATH=%cd%
+python run_fixed.py
 pause
